@@ -11,12 +11,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #000;
 }
 
 .container {
-    background-color: blue;
-    height: 600px;
-    width: 600px;
+    background-color: #FFF;
+    height: 700px;
+    width: 700px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -26,5 +27,5 @@ body {
 
 .grid_item {
     border: 1px solid #000;
-    width: 6.25%;
+    opacity: 1;
 }
