@@ -12,8 +12,9 @@ addEventListener("DOMContentLoaded", () => {
             new_div.style.width = `${calculateWidth(size)}px`
             new_div.style.height = `${calculateWidth(size)}px`
             container.insertAdjacentElement("afterbegin", new_div)
-            setHoverEffect()
         }
+
+        setHoverEffect()
     }
 
     new_grid(16)
@@ -28,7 +29,8 @@ addEventListener("DOMContentLoaded", () => {
     function setHoverEffect() {
         document.querySelectorAll(".grid_item").forEach(e => {
             e.addEventListener("mouseenter", () => {
-                e.style.backgroundColor = "black"
+                e.style.backgroundColor = "rgb(0, 0, 0)";
+                e.style.opacity = lowerOpacity(e.style.opacity)     
             })
         })
     }
@@ -52,5 +54,22 @@ addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".grid_item").forEach(e => {
             e.remove()
         })
+    }
+
+    // randomColor
+    // const colorPalette = ["black", "red", "green", "yellow", "orange", "pink", "blue", "purple", "brown", "gray"]
+
+    // const randomColor = function() {
+    //     let number = Math.ceil(Math.random() * 10).toFixed(0) - 1
+    //     return colorPalette[number]
+    // }
+
+    const lowerOpacity = function(opacity) {
+        if (!opacity) {
+            return "1"
+        }
+        if (Number(opacity) > 0.1) {
+            return (Number(opacity) - 0.1).toString()
+        }
     }
 })
