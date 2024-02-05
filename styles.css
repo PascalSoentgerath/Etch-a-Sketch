@@ -10,7 +10,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFEEEE;
+    background-color: #FFFFEE;
+}
+
+:root,
+button {
+    font-family: "Euclid", sans-serif;
 }
 
 /* HEADER */
@@ -46,7 +51,7 @@ main {
 
 .main-container {
     display: flex;
-    flex-basis: auto;
+    justify-content: center;
 }
 
 .main-container > div:nth-of-type(odd) {
@@ -69,11 +74,11 @@ main {
 
 .radio-inputs label {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: ;
     border: 1px solid #010;
     padding: 7.5px;
-    min-width: 150px;
+    min-width: 130px;
     text-align: center;
     border-radius: 16px;
 }   
@@ -82,7 +87,7 @@ main {
     appearance: none;
 }
 
-#radio-blue:checked ~ label { border: 3px solid #99CAD9;}
+#radio-blue:checked ~ label { border: 3px solid #166983;}
 #radio-red:checked ~ label { border: 3px solid #B83024;}
 #radio-green:checked ~ label { border: 3px solid#18350a;}
 #radio-rainbow:checked ~ label {  
@@ -102,11 +107,18 @@ main {
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
-
-    flex-basis: 50%;
 }
 
 .grid_item {
     border: 1px solid #000;
     opacity: 1;
+}
+
+.reset-btn {
+    font-size: 1.2rem;
+    padding: 7.5px;
+    width: 130px;
+    border-radius: 16px;
+    border: 1px solid #010;
+    background-color: transparent;
 }
