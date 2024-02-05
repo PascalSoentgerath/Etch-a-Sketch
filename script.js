@@ -2,7 +2,7 @@
 
 
 addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".container")
+    const grid = document.querySelector(".grid")
 
     const new_grid = function(size) {
 
@@ -11,7 +11,7 @@ addEventListener("DOMContentLoaded", () => {
             new_div.setAttribute("class", "grid_item")
             new_div.style.width = `${calculateWidth(size)}px`
             new_div.style.height = `${calculateWidth(size)}px`
-            container.insertAdjacentElement("afterbegin", new_div)
+            grid.insertAdjacentElement("afterbegin", new_div)
         }
 
         setHoverEffect()
@@ -21,7 +21,7 @@ addEventListener("DOMContentLoaded", () => {
 
     function calculateWidth(size) {
         const calc_percent = 100 / size
-        const calc_px = (700 * calc_percent / 100).toString()
+        const calc_px = (450 * calc_percent / 100).toString()
         return calc_px
 
     }
@@ -72,4 +72,16 @@ addEventListener("DOMContentLoaded", () => {
             return (Number(opacity) - 0.1).toString()
         }
     }
+
+    const range = document.querySelector("#range")
+
+    range.addEventListener("click", () => {
+        document.querySelector('label[for="range"]').textContent = range.value
+    })
+
+    console.log(range)
 })
+
+
+
+
