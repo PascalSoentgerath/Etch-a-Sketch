@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FFEEEE;
 }
 
 /* HEADER */
@@ -27,19 +28,82 @@ nav {
     font-family: "Londrina", fantasy;
 }
 
+/* Main Content */
+
+
 main {
     height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.container {
+.range {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-basis: auto;
+}
+
+.main-container > div:nth-of-type(odd) {
+    flex-basis: 25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-inputs {
+    list-style-type: none;
+}
+
+.radio-inputs > li {
+    display: block;
+    margin: 50px 0;
+}
+
+.radio-inputs label {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: ;
+    border: 1px solid #010;
+    padding: 7.5px;
+    min-width: 150px;
+    text-align: center;
+    border-radius: 16px;
+}   
+
+.radio-inputs input[type="radio"] {
+    appearance: none;
+}
+
+#radio-blue:checked ~ label { border: 3px solid #99CAD9;}
+#radio-red:checked ~ label { border: 3px solid #B83024;}
+#radio-green:checked ~ label { border: 3px solid#18350a;}
+#radio-rainbow:checked ~ label {  
+    border-top: 3px solid #E81416;
+    border-right: 3px solid #FAEB36;
+    border-bottom: 3px solid #487DE7;
+    border-left: 3px solid #70369D;
+}
+
+/* linear-gradient(45deg, #E81416 14.2%, #FFA500 28.4%, #FAEB36 42.6%, #79C314 56.8%, #487DE7 71%, #4B369D 85.2%, #70369D); */
+
+.grid {
     background-color: #FFF;
-    height: 700px;
-    width: 700px;
+    height: 450px;
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
 
+    flex-basis: 50%;
 }
 
 .grid_item {
