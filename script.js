@@ -37,18 +37,18 @@ addEventListener("DOMContentLoaded", () => {
 
     
 
-    const resetButton = document.querySelector(".reset_button")
+    // const resetButton = document.querySelector(".reset_button")
 
-    resetButton.addEventListener("click", (e) => {
-        const grid_size = prompt("Enter the size of your Grid (only numbers from 16 to 100)")
-        if (grid_size >= 16 && grid_size <= 100) {
-            reset_grid()
-            new_grid(grid_size)
-        } else {
-            alert("Invalid number, please enter a number from 16 to 100")
-        }
+    // resetButton.addEventListener("click", (e) => {
+    //     const grid_size = prompt("Enter the size of your Grid (only numbers from 16 to 100)")
+    //     if (grid_size >= 16 && grid_size <= 100) {
+    //         reset_grid()
+    //         new_grid(grid_size)
+    //     } else {
+    //         alert("Invalid number, please enter a number from 16 to 100")
+    //     }
 
-    })
+    // })
 
     const reset_grid = function() {
         document.querySelectorAll(".grid_item").forEach(e => {
