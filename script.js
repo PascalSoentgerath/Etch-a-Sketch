@@ -75,11 +75,12 @@ addEventListener("DOMContentLoaded", () => {
 
     const range = document.querySelector("#range")
 
-    range.addEventListener("click", () => {
+    range.addEventListener("input", () => {
         document.querySelector('label[for="range"]').textContent = range.value
     })
 
-    console.log(range)
+
+    
 })
 
 
