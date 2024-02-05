@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: "Londrina";
+    src: url(./LondrinaSketch/LondrinaSketch-Regular.woff) format("woff"),
+         url(./LondrinaSketch/LondrinaSketch-Regular.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    
+}
