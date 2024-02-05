@@ -1,4 +1,5 @@
 
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +25,11 @@ label {
     cursor: pointer;
 }
 
-/* HEADER */
+/* 
+
+HEADER 
+
+*/
 
 nav {
     height: 15vh;
@@ -39,7 +44,11 @@ nav {
     font-family: "Londrina", fantasy;
 }
 
-/* Main Content */
+/*
+
+MAIN CONTENT
+
+*/
 
 
 main {
@@ -52,6 +61,84 @@ main {
 label[for="range"] {
     font-size: 22px;
 }
+
+/*
+
+MAIN-CONTAINER 
+
+*/
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container > div:nth-of-type(odd) {
+    flex-basis: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-container > div:nth-of-type(1) {
+    align-items: flex-end;
+}
+
+.grid {
+    background-color: #FFF;
+    height: 650px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid_item {
+    border: 1px solid #000;
+    opacity: 1;
+}
+
+.reset-btn {
+    font-size: 1.7rem;
+    padding: 12px;
+    width: 200px;
+    border-radius: 16px;
+    border: 1px solid #010;
+    background-color: transparent;
+    margin-left: 75px;
+}
+
+@media (max-width: 952px) {
+    .main-container > div:nth-of-type(odd) {
+        flex-basis: 25%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid {
+        height: 450px;
+        width: 450px;
+    }
+
+    .reset-btn {
+        width: 130px;
+        font-size: 1.2rem;
+        padding: 7.5px;
+        margin-left: 0;
+    }
+}
+
+/*
+
+RANGE
+
+*/
 
 .range {
     appearance: none;
@@ -111,36 +198,29 @@ label[for="range"] {
 
 }
 
-.main-container {
-    display: flex;
-    justify-content: center;
-}
+/*
 
-.main-container > div:nth-of-type(odd) {
-    flex-basis: 25%;
+RADIO BUTTONS 
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+*/
 
 .radio-inputs {
     list-style-type: none;
+    margin-right: 75px;
 }
 
 .radio-inputs > li {
     display: block;
-    margin: 50px 0;
+    margin: 60px 0;
 }
 
 .radio-inputs label {
     display: inline-block;
-    font-size: 1.2rem;
-    background-color: ;
+    font-size: 1.7rem;
+    background-color: transparent;
     border: 1px solid #010;
-    padding: 7.5px;
-    min-width: 130px;
+    padding: 12px;
+    min-width: 200px;
     text-align: center;
     border-radius: 16px;
 }   
@@ -151,36 +231,28 @@ label[for="range"] {
 
 #radio-blue:checked ~ label { border: 3px solid #166983;}
 #radio-red:checked ~ label { border: 3px solid #B83024;}
-#radio-green:checked ~ label { border: 3px solid#18350a;}
+#radio-green:checked ~ label { border: 3px solid#39721d;}
 #radio-rainbow:checked ~ label {  
     border-top: 3px solid #E81416;
     border-right: 3px solid #FAEB36;
     border-bottom: 3px solid #487DE7;
     border-left: 3px solid #70369D;
 }
+#radio-dark:checked ~ label { border: 3px solid #070606}
 
-/* linear-gradient(45deg, #E81416 14.2%, #FFA500 28.4%, #FAEB36 42.6%, #79C314 56.8%, #487DE7 71%, #4B369D 85.2%, #70369D); */
 
-.grid {
-    background-color: #FFF;
-    height: 450px;
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.grid_item {
-    border: 1px solid #000;
-    opacity: 1;
-}
-
-.reset-btn {
-    font-size: 1.2rem;
-    padding: 7.5px;
-    width: 130px;
-    border-radius: 16px;
-    border: 1px solid #010;
-    background-color: transparent;
+@media (max-width: 952px) {
+    
+    .radio-inputs {
+        margin: 0;
+    }
+    .radio-inputs > li {
+        margin: 40px 0;
+    }
+    .radio-inputs label {
+        font-size: 1.2rem;
+        padding: 7.5px;
+        min-width: 130px;
+    }  
 }
