@@ -18,6 +18,12 @@ button {
     font-family: "Euclid", sans-serif;
 }
 
+button,
+input,
+label {
+    cursor: pointer;
+}
+
 /* HEADER */
 
 nav {
@@ -37,16 +43,72 @@ nav {
 
 
 main {
-    height: 85vh;
+    min-height: 85vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    text-align: center;
+}
+
+label[for="range"] {
+    font-size: 22px;
 }
 
 .range {
-    width: 60%;
+    appearance: none;
+    width: 33.3%;
     margin-bottom: 20px;
+
+    align-self: center;
+}
+
+.range:focus {
+    outline: 1px solid #003;
+}
+
+.range::-webkit-slider-runnable-track {
+    background: transparent;
+    outline: 1px solid #000;
+    color: #FFF;
+    height: 16px;
+}
+
+.range::-webkit-slider-thumb {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.range::-moz-range-track {
+    background: transparent;
+    outline: 1px solid #000;
+    color: #FFF;
+    height: 16px;
+}
+
+.range::-moz-range-thumb {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.range::-ms-track {
+    background: transparent;
+    outline: 1px solid #000;
+    color: #FFF;
+    height: 16px;
+}
+
+.range::-ms-thumb {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #000;
+    border-radius: 50%;
+
 }
 
 .main-container {
