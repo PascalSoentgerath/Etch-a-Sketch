@@ -4,6 +4,13 @@
     src: url(./LondrinaSketch/LondrinaSketch-Regular.woff) format("woff"),
          url(./LondrinaSketch/LondrinaSketch-Regular.woff2) format("woff2");
     font-weight: normal;
-    font-style: normal;
-    
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Euclid";
+    src: url(./Euclid/Euclid\ Circular\ A\ Medium.woff) format("woff"),
+         url(./Euclid/Euclid\ Circular\ A\ Medium.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal; 
 }
